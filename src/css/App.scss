@@ -1,6 +1,29 @@
 @import "./Props.scss";
 
+body{
+    background: #d5dbdb;
+}
 .splash{
     width: 400px;
     height: 400px;
+}
+
+.green-belt{
+    background: #128c7e;
+    height: 15vh;
+}
+.messenger{
+    background: #fff;
+    top: 20px;
+    right: 30px;
+    bottom: 20px;
+    left: 30px;
+    border-radius: 3px;
+    .inbox{
+        width: 460px;
+        border-right: 1px #ddd solid;
+    }
+    .chatbox{
+        flex: 1;
+    }
 }

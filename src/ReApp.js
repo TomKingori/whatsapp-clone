@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
 
 import './css/App.scss';
+
 // Pages
 import Splash from './pages/Splash';
+import Messenger from './pages/Messenger';
 
 function ReApp(props) {
 
-    const { loaded } = props;
+    const { loaded, setState } = props;
+    useEffect(() => {
+        setTimeout(() => {
+            setState(true)
+        }, 1000)
+    }, [])
 
     return (
-        loaded ? <div>App is loaded</div>: <Splash />
+        <BrowserRouter>
+            {loaded ? 
+            <Messenger/>
+            : <Splash />}
+        </BrowserRouter>
     );
 }
 
