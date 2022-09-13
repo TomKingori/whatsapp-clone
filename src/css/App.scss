@@ -22,6 +22,33 @@ body{
     .inbox{
         width: 460px;
         border-right: 1px #ddd solid;
+
+        .userbox{
+            border-bottom: 1px #ccc solid;
+            background: #eee;
+            .you{
+                flex:1;
+                .user{
+                    width: 40px;
+                    height: 40px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .actions{
+                flex: 1;
+                justify-content: flex-end;
+                button{
+                    border: none;
+                    outline: none;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
     }
     .chatbox{
         flex: 1;

@@ -19,6 +19,10 @@
     width: 80px;
 }
 
+.s24{
+    width: 24px;
+}
+
 .fixed{
     position: fixed;
     &.fill{
@@ -32,4 +36,7 @@
 .flex{
     display: flex;
     flex-direction: row;
+    &.aic{
+        align-items: center;
+    }
 }
