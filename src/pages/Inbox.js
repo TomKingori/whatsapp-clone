@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Chat from '../images/chat.svg'
-import More from '../images/more_vert.svg'
+import Chat from '../images/chat.svg';
+import More from '../images/more_vert.svg';
+import Search from "../images/search.svg"
 
 function Inbox(props) {
     return (
@@ -15,12 +16,20 @@ function Inbox(props) {
                     </Link>
                 </div>
                 <div className={`actions rel flex aic`}>
-                    <button><img src={Chat} className={`s24`} alt="chat"/></button>
-                    <button><img src={More} className={`s24`} alt="more"/></button>
+                    <button><img src={Chat} className={`s24 image`} alt="chat"/></button>
+                    <button><img src={More} className={`s24 image`} alt="more"/></button>
                 </div>
+            </div>
+
+            {/* Searchbox */}
+            <div className={`search flex`}>
+                <button><img src={Search} className={`s24 image`} alt="more"/></button>
+                <input placeholder={`Search or start new chat`} className={`s15 font`} />
             </div>
             
         </div>
+
+        
     );
 }
 
