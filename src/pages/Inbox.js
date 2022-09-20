@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import InboxItem from './subs/InboxItem';
+
 import Chat from '../images/chat.svg';
 import More from '../images/more_vert.svg';
 import Search from "../images/search.svg"
@@ -23,9 +25,14 @@ function Inbox(props) {
 
             {/* Searchbox */}
             <div className={`search flex`}>
-                <button><img src={Search} className={`s24 image`} alt="more"/></button>
-                <input placeholder={`Search or start new chat`} className={`s15 font`} />
+                <div className={`sbox flex aic`}>
+                    <button><img src={Search} className={`s24 image`} alt="more"/></button>
+                    <input placeholder={`Search or start new chat`} className={`s15 font`} />
+                </div>
             </div>
+
+            {/* conversation */}
+            {['','','','','','','','','','','','','',''].map(node => <InboxItem />)}
             
         </div>
 
